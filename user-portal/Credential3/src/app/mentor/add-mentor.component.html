@@ -1,0 +1,86 @@
+<div class="col-md-6">
+  <h2 class="text-center">Add Mentor Details</h2>
+<form>
+  <div class="form-group">
+    <label for="uname">User Name</label>
+    <input type="text" [(ngModel)]="mentor.userName" placeholder="Username" name="uname" class="form-control" id="uname">
+  </div>
+
+  <div class="form-group">
+    <label for="pwd">Password:</label>
+    <input [(ngModel)]="mentor.password" placeholder="Password" name="pwd" class="form-control" id="pwd">
+  </div>
+
+  <div class="form-group">
+    <label for="fname">First Name:</label>
+    <input [(ngModel)]="mentor.firstName" placeholder="First name" name="fname" class="form-control" id="fname">
+  </div>
+
+  <div class="form-group">
+    <label for="lname">Last Name:</label>
+    <input [(ngModel)]="mentor.lastName" placeholder="Last name" name="lname" class="form-control" id="lname">
+  </div>
+
+  <div class="form-group">
+    <label for="contact">Contact Number</label>
+    <input [(ngModel)]="mentor.contactNumber" placeholder="Contact Number" name="contact" class="form-control" id="contact">
+  </div>
+
+  <div class="form-group">
+    <label for="rcode">Registration Code:</label>
+    <input [(ngModel)]="mentor.regCode" placeholder="Registration Code" name="rcode" class="form-control" id="rcode">
+  </div>
+
+  <div class="form-group">
+    <label for="role">Role:</label>
+    <input [(ngModel)]="mentor.role" placeholder="Role" name="role" class="form-control" id="role">
+  </div>
+
+  <div class="form-group">
+    <label for="linkedin">Linkedin URL:</label>
+    <input [(ngModel)]="mentor.linkedinUrl" placeholder="linkedin Url" name="likedin" class="form-control" id="linkedin">
+  </div>
+
+  <div class="form-group">
+    <label for="exp">Experience:</label>
+    <input [(ngModel)]="mentor.yearsOfExperience" placeholder="Experience in years" name="exp" class="form-control" id="exp">
+  </div>
+
+  <div class="form-group">
+    <label for="active">Active Status:</label>
+    <input [(ngModel)]="mentor.active" placeholder="Active" name="active" class="form-control" id="active">
+  </div>
+
+  <div class="form-group">
+    <label for="cSignUp">Confirmed Signup:</label>
+    <input [(ngModel)]="mentor.confirmedSignup" placeholder="Confirmation for signup" name="cSignUp" class="form-control" id="cSignUp">
+  </div>
+
+  <div class="form-group">
+    <label for="resetPwdDate">Reset Password Date:</label>
+    <input [(ngModel)]="mentor.resetPasswordDate" placeholder="ResetPassword Date" name="resetPwdDate" class="form-control" id="resetPwdDate">
+  </div>
+
+  <div class="form-group">
+    <label for="timeZone">Time Zone:</label>
+    <input [(ngModel)]="mentor.timeZone" placeholder="Time Zone" name="timeZone" class="form-control" id="timeZone">
+  </div>
+
+  <div class="form-group">
+      <label for="workTime">Work Time:</label>
+      <input [(ngModel)]="mentor.workTime" placeholder="Work Time" name="workTime" class="form-control" id="workTime">
+    </div>
+
+    <div class="form-group">
+        <label for="rating">Rating:</label>
+        <input [(ngModel)]="mentor.rating" placeholder="Rating" name="rating" class="form-control" id="rating">
+      </div>
+
+      <div class="form-group">
+          <label for="resetPwd">Reset Password:</label>
+          <input [(ngModel)]="mentor.resetPassword" placeholder="Confirmation for ResetPassword" name="resetPwd" class="form-control" id="resetPwd">
+        </div>
+
+  <button class="btn btn-success" (click)="createMentor()">Insert</button>
+</form>
+</div>

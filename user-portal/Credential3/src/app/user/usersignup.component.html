@@ -1,0 +1,85 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="col-md-12">
+  <h2 class="text-center">User SignUp</h2>
+<form class="col-md-12" style="width: 50%;margin-left: 25%">
+  <div class="form-group">
+    <label for="uname" class="">User Name</label>
+    <i  ></i> 
+    <input type="text" [(ngModel)]="user.userName" placeholder="Username" name="uname" class="form-control" id="uname">
+  </div>
+
+  <div class="form-group">
+    <label for="pwd">Password:</label>
+    <input type="password" [(ngModel)]="user.password" placeholder="Password" name="pwd" class="form-control" id="pwd">
+  </div>
+
+  <div class="form-group">
+    <label for="fname">First Name:</label>
+    <input [(ngModel)]="user.firstName" placeholder="First name" name="fname" class="form-control" id="fname">
+  </div>
+
+  <div class="form-group">
+    <label for="lname">Last Name:</label>
+    <input [(ngModel)]="user.lastName" placeholder="Last name" name="lname" class="form-control" id="lname">
+  </div>
+
+  <div class="form-group">
+    <label for="contact">Contact Number</label>
+    <input [(ngModel)]="user.contactNumber" placeholder="Contact Number" name="contact" class="form-control" id="contact">
+  </div>
+
+  <!-- <div class="form-group">
+    <label for="rcode">Registration Code:</label>
+    <input [(ngModel)]="user.regCode" placeholder="Registration Code" name="rcode" class="form-control" id="rcode">
+  </div>
+
+  <div class="form-group">
+    <label for="role">Role:</label>
+    <input [(ngModel)]="user.role" placeholder="Role" name="role" class="form-control" id="role">
+  </div>
+
+  <div class="form-group">
+    <label for="linkedin">Linkedin URL:</label>
+    <input [(ngModel)]="user.linkedinUrl" placeholder="linkedin Url" name="likedin" class="form-control" id="linkedin">
+  </div>
+
+  <div class="form-group">
+    <label for="exp">Experience:</label>
+    <input [(ngModel)]="user.yearsOfExperience" placeholder="Experience in years" name="exp" class="form-control" id="exp">
+  </div>
+
+  <div class="form-group">
+    <label for="active">Active Status:</label>
+    <input [(ngModel)]="user.active" placeholder="true/false" name="active" class="form-control" id="active">
+  </div>
+
+  <div class="form-group">
+    <label for="cSignUp">Confirmed Signup:</label>
+    <input [(ngModel)]="user.confirmedSignup" placeholder="true/false" name="cSignUp" class="form-control" id="cSignUp">
+  </div>
+
+  <div class="form-group">
+    <label for="resetPwd">Reset Password:</label>
+    <input [(ngModel)]="user.resetPassword" placeholder="true/false" name="resetPwd" class="form-control" id="resetPwd">
+  </div> -->
+
+  <div class="form-group">
+    <label for="resetPwdDate">Reset Password Date:</label>
+    <input [(ngModel)]="user.resetPasswordDate" placeholder="YYYY-MM-DD" name="resetPwdDate" class="form-control" id="resetPwdDate">
+  </div>
+
+  <button class="btn btn-success" style="margin-left: 50%" (click)="createUser()">SignUp</button>
+</form>
+</div>
+<style>
+form{
+  font-family: monospace;
+}
+h2{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+input{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size:14px;
+}
+</style>

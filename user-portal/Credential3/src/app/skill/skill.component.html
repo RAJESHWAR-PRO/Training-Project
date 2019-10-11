@@ -1,0 +1,25 @@
+<div class="col-md-6">
+<h2> User Details</h2>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>TOC</th>
+    <th>Prerequisites</th>
+    
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let skill of users">
+    <td>{{skill.id}}</td>
+    <td>{{skill.name}}</td>
+    <td>{{skill.toc}}</td>
+    <td>{{skill.prerequisites}}</td>
+    
+    <td><button class="btn btn-danger" (click)="deleteUser(skill)"> Delete User</button></td>
+  </tr>
+  </tbody>
+</table>
+</div>

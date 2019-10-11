@@ -1,0 +1,204 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <body>
+<div class="container" style="border-radius: 5px;border:1px solid black; ;height: wrap-content; background-color:#eee;">
+    <form class="navbar-form">
+      <div class="text-center">
+        <h4>Select Your Mentor</h4>
+      </div>
+      <div class="container row">
+        <div class="input-group navbar-form col-lg-6" >
+            <select class="form-control" style="height: 34px;width: 100%;" [(ngModel)] = "selectedOption" name="mentor.userName" >
+                <option>--Select a Mentor--</option>
+                <option *ngFor="let mentor of mentors;" style="width: 100%" name = "mentor.userName">{{mentor.userName}}</option>
+            </select>
+            <div class="input-group-btn">
+              <button class="btn btn-default" type="submit" (click)="getByUserName()">
+                <i class="glyphicon glyphicon-search"></i>
+              </button>
+              </div>
+        </div>
+        <div class="input-group navbar-form col-lg-6" >
+            <select class="form-control" style="height: 34px;width:100%"  [(ngModel)] = "selectedOption1" name="technology.technologies">
+              <option>--Select a Technology--</option>  
+              <option *ngFor="let technology of technologies;">{{technology.technologies}}</option>
+              </select>
+            <div class="input-group-btn">
+              <button class="btn btn-default" type="submit" (click)=getByTechnologies()>
+                <i class="glyphicon glyphicon-search"></i>
+              </button>
+            </div>
+        </div>
+      </div>
+    </form>
+</div>
+<style>
+  .col{
+    padding-right: 10px;
+  }
+  </style>
+  
+  
+  <div class="col-md-12" *ngIf="totalMentorDetails">
+  <h2> Mentor Details</h2>
+  
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th >MentorId</th>
+      <th>UserName</th>
+      <th>Password</th>
+      <th>FirstName</th>
+      <th>LastName</th>
+      <th>ContactNumber</th>
+      <th>RegistrationCode</th>
+      <th>Role</th>
+      <th>LinkedInUrl</th>
+      <th>Experience</th>
+      <!-- <th>Active</th>
+      <th>ConfirmedSignup</th>
+      <th>Reset Password Date</th>
+      <th>TimeZone</th>
+      <th>WorkTime</th> -->
+    </tr>
+    </thead> 
+    <tr *ngFor="let mentor of mentors; let mentorId=index;" >
+      <!-- <div *ngIf = "user.active == true"></div> -->
+      <td>{{mentor.mentorId}}</td>
+      <td>{{mentor.userName}}</td>
+      <td>{{mentor.password}}</td>
+      <td>{{mentor.firstName}}</td>
+      <td>{{mentor.lastName}}</td>
+      <td>{{mentor.contactNumber}}</td>
+      <td>{{mentor.regCode}}</td>
+      <td>{{mentor.role}}</td>
+      <td>{{mentor.linkedinUrl}}</td>
+      <td>{{mentor.yearsOfExperience}}</td>
+      <!-- <td contenteditable="false"  (input)="act = $event.target.value"><textarea [(ngModel)]="mentor.active" maxlength="5" style="resize: none;max-lines: 1;">{{mentor.active}}</textarea></td> -->
+      <!-- <td>{{mentor.active}}</td>
+      <td>{{mentor.confirmedSignUp}}</td>
+      <td>{{mentor.resetPasswordDate}}</td>
+      <td>{{mentor.timeZone}}</td>
+      <td>{{mentor.workTime}}</td> -->
+      <!-- <td><button class="btn btn-danger" (click)="deletementor(mentor)"> Delete</button></td> -->
+      <td><button class="btn btn-danger" (click) = "Subscribe(mentor)"> Subscribe</button></td>
+      <!-- </div> -->
+    </tr>
+   
+  </table>
+  </div>
+<style>
+  .col{
+    padding-right: 10px;
+  }
+  </style>
+  
+  
+  <div class="col-md-12" *ngIf="mentordetails">
+    <h2> Mentor Details</h2>
+    
+    <table class="table table-striped" style="width: 100%;">
+      <thead>
+      <tr>
+        <th >MentorId</th>
+        <th>UserName</th>
+        <th>Password</th>
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th>ContactNumber</th>
+        <th>Subscribe</th>
+      </tr>
+      </thead> 
+      <tr *ngFor="let mentor of users1; let mentorId=index;" >
+        <td>{{mentor.mentorId}}</td>
+        <td>{{mentor.userName}}</td>
+        <td>{{mentor.password}}</td>
+        <td>{{mentor.firstName}}</td>
+        <td>{{mentor.lastName}}</td>
+        <td>{{mentor.contactNumber}}</td>
+        <td><button class="btn btn-danger" (click) = "Subscribe(mentor)"> Subscribe</button></td>
+        <!-- </div> -->
+      </tr>
+     
+    </table>
+  </div>
+<div class="col-md-12" *ngIf="technologydetails">
+  <h2> Technologies Details</h2>
+  
+  <table class="table table-striped" style="width: 100%;">
+    <thead>
+    <tr>
+      <th>TechnologyId</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Subscribe</th>
+    </tr>
+    </thead> 
+    <tr *ngFor="let technologies of technologies1; let mentorId=index;" >
+      <td>{{technologies.id}}</td>
+      <td>{{technologies.technologies}}</td>
+      <td>{{technologies.description}}</td>
+      <td><button class="btn btn-danger" (click) = "Subscribe1(technologies)"> Get Mentor Details</button></td>
+      <!-- </div> -->
+    </tr>
+   
+  </table>
+</div>
+<div class="col-lg-12" *ngIf="trainerdetails">
+  <h2>Trainer Information</h2>
+  <table class="table table-striped">
+    <tr>
+      <th>Id</th>
+      <th>Start Date</th>
+      <th>End Date</th>
+      <th>Fees</th>
+      <th>Technology</th>
+      <th>Technology Description</th>
+      <th>Rating</th>
+      <th>Submission</th>
+    </tr>
+    <tr *ngFor="let trainer of trainings">
+      <td>{{trainer.id}}</td>
+      <td>{{trainer.startDate}}</td>
+      <td>{{trainer.endDate}}</td>
+      <td>{{trainer.fees}}</td>
+      <td>{{trainer.technologies.technologies}}</td>
+      <td>{{trainer.technologies.description}}</td>
+      <td>{{trainer.rating}}</td>
+      <td><button class="btn btn-danger" (click)="mentorConfirm(trainer)"> Confirm </button></td>
+    </tr>
+  </table>
+</div>
+<div *ngIf="trainerstechdetails">
+  <h2>Mentor details</h2>
+  <table class="table table-striped">
+    <tr>
+      <th>Mentor Id</th>
+      <th>Mentor Name</th>
+      <th>Start Date</th>
+      <th>End Date</th>
+      <th>Rating</th>
+      <th>Fees</th>
+      <th>Submission</th>
+    </tr>
+    <tr *ngFor="let trainertech of trainingstech">
+      <td>{{trainertech.mentor.mentorId}}</td>
+      <td>{{trainertech.mentor.firstName}}</td>
+      <td>{{trainertech.startDate}}</td>
+      <td>{{trainertech.endDate}}</td>
+      <td>{{trainertech.rating}}</td>
+      <td>{{trainertech.fees}}</td>
+      <td><button class="btn btn-danger" (click)="mentorConfirm(trainertech)"> Confirm </button></td>
+    </tr>
+  </table>
+</div>
+    
+</body>
+<style>
+   /* select:hover{
+    border:1px solid black;
+    border-radius: 5px;
+    background-color:green;
+  } */
+</style>

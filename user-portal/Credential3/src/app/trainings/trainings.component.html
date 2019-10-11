@@ -1,0 +1,52 @@
+<div class="col-md-6">
+<h2> Trainings Details</h2>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th >Id</th>
+    <th>Status</th>
+    <th>Progress</th>
+    <th>Fees</th>
+    <th>Commission</th>
+    <th>Rating</th>
+    <th>Start Date</th>
+    <th>End Date</th>
+    <th>Start Time</th>
+    <th>End Time</th>
+    <th>Amount Received</th>
+    <th>User id</th>
+    <th>Technology id</th>
+    <th>Mentor id</th>
+    <!-- <th>Skill id</th>
+    <th>RazorPay id</th> -->
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let training of trainings">
+    <td >{{training.id}}</td>
+    <td>{{training.status}}</td>
+    <td>{{training.progress}}</td>
+    <td>{{training.fees}}</td>
+    <td>{{training.commissionAmount}}</td>
+    <td>{{training.rating}}</td>
+    <td>{{training.startDate}}</td>
+    <td>{{training.endDate}}</td>
+    <td>{{training.startTime}}</td>
+    <td>{{training.endTime}}</td>
+    <td>{{training.amountReceived}}</td>
+    <td>{{training.userId}}</td>
+    <td>{{training.technologies.techid}}</td>
+    <td>{{training.mentor.mentorId}}</td>
+    <!-- <td>{{training.skillId}}</td> -->
+    <!-- <td>{{training.razorpayPaymentId}}</td> -->
+    <td><button class="btn btn-danger" (click)="deleteUser(training)"> Delete </button></td>
+  </tr>
+  </tbody>
+</table>
+</div>
+<style>
+  .table{
+    width: 100%;
+  }
+</style>

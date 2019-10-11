@@ -1,0 +1,106 @@
+<div class="col-md-12">
+  <h2 class="text-center">Add User Profile</h2>
+<form>
+  <table class="col-md-12 table">
+  	<tr>
+  		<td>
+  <div class="form-group">
+    <label for="uname">User Name</label>
+    <input type="text" [(ngModel)]="user.userName" placeholder="Username" name="uname" class="form-control" id="uname">
+  </div>
+  		</td>
+  		<td>
+  <div class="form-group">
+    <label for="pwd">Password:</label>
+    <input type="password" [(ngModel)]="user.password" placeholder="Password" name="pwd" class="form-control" id="pwd">
+  </div>
+  		</td>
+  	</tr>
+  	<tr>
+  		<td>
+  <div class="form-group">
+    <label for="fname">First Name:</label>
+    <input [(ngModel)]="user.firstName" placeholder="First name" name="fname" class="form-control" id="fname">
+  </div>
+  		</td>
+  		<td>
+  <div class="form-group">
+    <label for="lname">Last Name:</label>
+    <input [(ngModel)]="user.lastName" placeholder="Last name" name="lname" class="form-control" id="lname">
+  </div>
+  		</td>
+  	</tr>
+  	<tr>
+  		<td>
+  <div class="form-group">
+    <label for="contact">Contact Number</label>
+    <input [(ngModel)]="user.contactNumber" placeholder="Contact Number" name="contact" class="form-control" id="contact">
+  </div>
+  		</td>
+  	</tr>
+  	<tr>
+  		<td>
+  <div class="form-group">
+    <label for="rcode">Registration Code:</label>
+    <input [(ngModel)]="user.regCode" placeholder="Registration Code" name="rcode" class="form-control" id="rcode">
+  </div>
+  		</td>
+  	</tr>
+  	<tr>
+  		<td>
+  <div class="form-group">
+    <label for="role">Role:</label>
+    <input [(ngModel)]="user.role" placeholder="Role" name="role" class="form-control" id="role">
+  </div>
+		</td>
+		<td>
+  <div class="form-group">
+    <label for="linkedin">Linkedin URL:</label>
+    <input [(ngModel)]="user.linkedinUrl" placeholder="linkedin Url" name="likedin" class="form-control" id="linkedin">
+  </div>
+  		</td>
+  	</tr>
+  	<tr>
+  		<td>
+  <div class="form-group">
+    <label for="exp">Experience:</label>
+    <input [(ngModel)]="user.yearsOfExperience" placeholder="Experience in years" name="exp" class="form-control" id="exp">
+  </div>
+  		</td>
+  		<td>
+  <div class="form-group">
+    <label for="active">Active Status:</label>
+    <input [(ngModel)]="user.active" placeholder="true/false" name="active" class="form-control" id="active">
+  </div>
+  		</td>
+  	</tr>
+  	<tr>
+  		<td>
+  <div class="form-group">
+    <label for="cSignUp">Confirmed Signup:</label>
+    <input [(ngModel)]="user.confirmedSignup" placeholder="true/false" name="cSignUp" class="form-control" id="cSignUp">
+  </div>
+  		</td>
+  		<td>
+  <div class="form-group">
+    <label for="resetPwd">Reset Password:</label>
+    <input [(ngModel)]="user.resetPassword" placeholder="true/false" name="resetPwd" class="form-control" id="resetPwd">
+  </div>
+  		</td>
+  	</tr>
+  	<tr>
+  		<td>
+  <div class="form-group">
+    <label for="resetPwdDate">Reset Password Date:</label>
+    <input [(ngModel)]="user.resetPasswordDate" placeholder="YYYY-MM-DD" name="resetPwdDate" class="form-control" id="resetPwdDate">
+  </div>
+  		</td>
+	</tr>
+	<tr class="text-center">
+		<td colspan="2">
+  <button class="btn btn-success button" (click)="createUser()">Submit</button>
+  		</td>
+  	</tr>
+  </table>
+</form>
+</div>

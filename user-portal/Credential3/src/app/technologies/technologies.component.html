@@ -1,0 +1,23 @@
+<div class="col-md-6">
+<h2> User Details</h2>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th>Id</th>
+    <th>Technologies</th>
+    <th>Description</th>
+    
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let technology of technologies">
+    <td>{{technology.id}}</td>
+    <td>{{technology.technologies}}</td>
+    <td>{{technology.description}}</td>
+    
+    <td><button class="btn btn-danger" (click)="deleteUser(technology)">Delete</button></td>
+  </tr>
+  </tbody>
+</table>
+</div>

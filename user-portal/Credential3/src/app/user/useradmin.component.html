@@ -1,0 +1,67 @@
+ <div class="col-md-6">
+  <h2> User Details</h2>
+  
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>Id</th>
+      <th>Username</th>
+      <th>Password</th>
+      <th>Firstname</th>
+      <th>Lastname</th>
+      <th>Contact number</th>
+      <th>Regcode</th>
+      <th>Role</th>
+      <th>Active</th>
+      <th>Linkedinurl</th>
+      <th>YearofExperience/th>
+      <th>Confirmation</th>
+      <th>ResetPasswordDate</th>
+      <th>ResetPassword</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{user.id}}</td>
+      <td>{{user.userName}}</td>
+      <td>{{user.password}}</td>
+      <td>{{user.firstName}}</td>
+      <td>{{user.lastName}}</td>
+      <td>{{user.contactNumber}}</td>
+      <td>{{user.regCode}}</td>
+      <td>{{user.role}}</td>
+      <td><textarea [(ngModel)]="user.active">{{user.active}}</textarea></td>
+      <td>{{user.linkedinUrl}}</td>
+      <td>{{user.yearsOfExperience}}</td>
+      <td>{{user.confirmedSignUp}}</td>
+      <td>{{user.resetPasswordDate}}</td>
+      <td>{{user.resetPassword}}</td>
+  
+      <td><button class="btn btn-danger" (click)="updateUser(user)"> Update User</button></td>
+      <td><button class="btn btn-danger" (click)="deleteUser(user)"> Delete User</button></td>
+    </tr>
+    </tbody>
+  </table>
+  </div>
+   <!-- <div class="container-fluid">
+    <div class="col-md-offset-1">
+    </div>
+    <a style="margin-left:10px" routerLink="/mentor">List Mentors |  </a>
+    <a style="margin-left:10px" routerLink="/addpayment">Payment Gateway | </a>
+    <a style="margin-left:10px" routerLink="/payment">Payment History </a>
+    <br/>
+    </div>
+    <style>
+      a{
+        color: black;
+        margin-top: 10px;
+        margin-left: 10px;
+        text-decoration: none;
+        font-family: monospace;
+        font-size: 20px;
+      }
+      a:hover{
+        color:blue;
+        text-decoration: none;
+      }
+    </style> -->

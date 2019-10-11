@@ -1,0 +1,36 @@
+<div class="col-md-12">
+<h2> Payment History</h2>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th>Id</th>
+    <th>Tax Type</th>
+    <th>Amount</th>
+    <th>Remarks</th>
+    <th>Mentor Id</th>
+    <th>Mentor Name</th>
+    <th>Training Id</th>
+    <th>Skill Name</th>
+    <th>Total Amount To Mentor</th>
+    <th  class="text-center">Clear Payment</th>
+    
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let payment of payments">
+    <td>{{payment.id}}</td>
+    <td>{{payment.txnType}}</td>
+    <td>{{payment.amount}}</td>
+    <td>{{payment.remarks}}</td>
+    <td>{{payment.mentorId}}</td>
+    <td>{{payment.mentorName}}</td>
+    <td>{{payment.trainingId}}</td>
+    <td>{{payment.skillName}}</td>
+    <td>{{payment.totalAmountToMentor}}</td>
+   
+    <td><button class="btn btn-danger" (click)="deletePayment(payment)"> Delete payment</button></td>
+  </tr>
+  </tbody>
+</table>
+</div>

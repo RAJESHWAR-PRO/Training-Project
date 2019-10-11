@@ -1,0 +1,47 @@
+<div class="col-md-6">
+<h2> Mentor Details</h2>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th class="hidden">MentorId</th>
+    <th>UserName</th>
+    <th>Password</th>
+    <th>FirstName</th>
+    <th>LastName</th>
+    <th>ContactNumber</th>
+    <th>RegistrationCode</th>
+    <th>Role</th>
+    <th>LinkedInUrl</th>
+    <th>Experience</th>
+    <th>Active</th>
+    <th>ConfirmedSignup</th>
+    <th>Reset Password Date</th>
+    <th>TimeZone</th>
+    <th>WorkTime</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let mentor of mentors; let mentorId=index">
+    <td class="hidden">{{mentor.mentorId}}</td>
+    <td>{{mentor.userName}}</td>
+    <td>{{mentor.password}}</td>
+    <td>{{mentor.firstName}}</td>
+    <td>{{mentor.lastName}}</td>
+    <td>{{mentor.contactNumber}}</td>
+    <td>{{mentor.regCode}}</td>
+    <td>{{mentor.role}}</td>
+    <td>{{mentor.linkedinUrl}}</td>
+    <td>{{mentor.yearsOfExperience}}</td>
+    <td contenteditable="false"  (input)="act = $event.target.value"><textarea [(ngModel)]="mentor.active" maxlength="5" style="resize: none;max-lines: 1;">{{mentor.active}}</textarea></td>
+    <!-- <td contenteditable="true">{{mentor.active}}</td> -->
+    <td>{{mentor.confirmedSignUp}}</td>
+    <td>{{mentor.resetPasswordDate}}</td>
+    <td>{{mentor.timeZone}}</td>
+    <td>{{mentor.workTime}}</td>
+    <td><button class="btn btn-danger" (click)="updateUser(mentor)"> Update mentor</button></td>
+    <td><button class="btn btn-danger" (click)="deleteUser(mentor)"> Delete mentor</button></td>
+  </tr>
+  </tbody>
+</table>
+</div>

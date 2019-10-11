@@ -1,0 +1,22 @@
+<div class="col-md-6">
+  <h2 class="text-center">Add Skill Details</h2>
+<form>
+  <div class="form-group">
+    <label for="name">Skill Name</label>
+    <input type="text" [(ngModel)]="skill.name" placeholder="SkillName" name="name" class="form-control" id="name">
+  </div>
+
+  <div class="form-group">
+    <label for="toc">Time of Completion:</label>
+    <input [(ngModel)]="skill.toc" name="toc" class="form-control" id="toc">
+  </div>
+
+  <div class="form-group">
+    <label for="prerequisites">Prerequisites:</label>
+    <input [(ngModel)]="skill.prerequisites" placeholder="Prerequisites" name="prerequisites" class="form-control" id="prerequisites">
+  </div>
+
+  
+  <button class="btn btn-success" (click)="createSkill()">Insert</button>
+</form>
+</div>

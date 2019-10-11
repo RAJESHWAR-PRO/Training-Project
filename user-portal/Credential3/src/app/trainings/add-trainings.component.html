@@ -1,0 +1,142 @@
+<div class="col-md-12">
+  <h2 class="text-center">Add Trainers Profile</h2>
+<form>
+    <table class="col-md-12 table">
+        <tr>
+            <td>
+  <div class="form-group">
+    <label for="id">Training Id</label>
+    <input type="text" [(ngModel)]="trainings.id" placeholder="Trainings Id" name="trainings._id" class="form-control" id="id">
+  </div>
+            </td>  
+            <td> 
+  <div class="form-group">
+      <label for="status">Status</label>
+      <input type="text" [(ngModel)]="trainings.status" placeholder="Status" name="trainings.status" class="form-control" id="status">
+    </div>
+        </td>
+        </tr>
+        <tr>
+        <td>
+    <div class="form-group">
+        <label for="progress">Progress</label>
+        <input type="text" [(ngModel)]="trainings.progress" placeholder="Progress" name="trainings.progress" class="form-control" id="progress">
+      </div>
+        </td>
+        <td>
+      <div class="form-group">
+          <label for="camnt">Commission</label>
+          <input type="text" [(ngModel)]="trainings.commissionAmount" placeholder="Commission" name="trainings.commissionAmount" class="form-control" id="camnt">
+        </div>
+        </td>
+        </tr>
+        <tr>
+            <td>
+        <div class="form-group">
+            <label for="rating">Rating</label>
+            <input type="text" [(ngModel)]="trainings.rating" placeholder="Rating" name="trainings.rating" class="form-control" id="rating">
+          </div>
+            </td>
+        </tr><tr>
+            <td>
+    <div class="form-group">
+        <label for="startDate">Start Date</label>
+        <input placeholder="yyyy-mm-dd" [(ngModel)]="trainings.startDate" name="trainings.start_date" class="form-control" id="startDate">
+    </div>
+        </td>
+            <td>
+    <div class="form-group">
+        <label for="endDate">End Date</label>
+        <input placeholder="yyyy-mm-dd"  [(ngModel)]="trainings.endDate"  name="trainings.end_date" class="form-control" id="endDate">
+    </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+    <div class="form-group">
+        <label for="startTime">Start Time</label>
+        <input placeholder="hh:mm:ss" [(ngModel)]="trainings.startTime"  name="trainings.start_ime" class="form-control" id="startTime">
+    </div>
+        </td>
+        <td>
+    <div class="form-group">
+        <label for="endTime">End Time</label>
+        <input placeholder="hh:mm:ss"  [(ngModel)]="trainings.endTime"  name="trainings.end_time" class="form-control" id="endTime">
+    </div>
+        </td>
+        </tr>
+        <tr>
+            <td>
+    <div class="form-group">
+        <label for="amnt">Amount Received</label>
+        <input type="text" [(ngModel)]="trainings.amountReceived" placeholder="Amount" name="trainings.amount_received" class="form-control" id="amnt">
+    </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+    <div class="form-group">
+        <label for="uid">User Id</label>
+        <input type="text" [(ngModel)]="trainings.userId" placeholder="User Id" name="trainings.userId" class="form-control" id="uid">
+    </div>
+            </td>
+            <td>
+    <div class="form-group">
+        <label for="uname">User Name</label>
+        <input type="text" [(ngModel)]="trainings.userName" placeholder="User Name" name="trainings.userName" class="form-control" id="uname">
+    </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+    <div class="form-group">
+        <label for="mid">Mentor Id</label>
+        <input type="text" [(ngModel)]="trainings.mentorId" placeholder="Mentor Id" name="mentorid" class="form-control" id="mid">
+    </div>
+            </td>
+            <td>
+    <div class="form-group">
+        <label for="mname">Mentor Name</label>
+        <input type="text" [(ngModel)]="trainings.mentorName" placeholder="Mentor Name " name="mname" class="form-control" id="mname">
+    </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+    <div class="form-group">
+        <label for="sid">Skill Id </label>
+        <input type="text" [(ngModel)]="trainings.skillId" placeholder="Skill Id" name="sid" class="form-control" id="sid">
+    </div>
+            </td>
+            <td>
+    <div class="form-group">
+        <label for="sname">Skill Name</label>
+        <input type="text" [(ngModel)]="trainings.skillName" placeholder=" Skill Name" name="sname" class="form-control" id="sname">
+    </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+    <div class="form-group">
+        <label for="fees">Fees</label>
+        <input type="text" [(ngModel)]="trainings.fees" placeholder="Fees" name="fees" class="form-control" id="fees">
+    </div>
+            </td>
+        </tr>
+        <tr class="text-center">
+            <td colspan="2">
+    <button class="btn btn-success" (click)="createTrainings()"> Submit </button>
+    </td>
+    </tr>
+  </table>
+</form>
+</div>
+<style>
+tr{
+    border:1px dotted black;
+}
+form{
+   
+}
+
+</style>

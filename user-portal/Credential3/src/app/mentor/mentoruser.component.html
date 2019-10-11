@@ -1,0 +1,16 @@
+<div>
+    <table class="table table-striped">
+        <th *ngFor="let trainingsTech of trainingsMentor">{{trainingsTech.technologies.technologies}}
+            <tr>
+                <th>UserId</th>
+                <th>First Name</th>
+                <th>Contact Number</th>
+            </tr>
+            <tr *ngFor="let trainings of trainingsTechnology;">
+                <td>{{trainings.id}}</td>
+                <td>{{trainings.firstName}}</td>
+                <td>{{trainings.contactNumber}}</td>
+            </tr>
+        </th>
+    </table>
+</div>

@@ -1,0 +1,105 @@
+<style>
+/* .button{
+  background-color: lightblue;
+  color:white;
+  width:100px;
+  height:50px;
+  border-radius: 3px;
+  font-size: 20px;
+}
+.row{
+height: 100px;
+} */
+.col-lg-6{
+  height: 50px;
+  width:90%;
+  background-color: #eeeeee;
+  /* margin-right: 2px; */
+  border: 5px solid white;
+  /* border-radius: 5px; */
+  
+}
+.row{
+  margin-top: 1%;
+}
+button{
+  border-radius: 3px;
+  /* border: 5px solid black;   */
+}
+
+.container{
+  margin-top: 1px;
+}
+.adduser{
+  background: tomato;
+}
+.listuser{
+  background: lightgreen;
+}
+.addmentor{
+  background: lightgreen;
+}
+.listmentor{
+  background: tomato;
+}
+.addpayment{
+  background: tomato;
+}
+.listpayment{
+  background-color: lightgreen;
+}
+.addtrainings{
+  background: lightgreen
+}
+.listtrainings{
+  background: tomato;
+}
+.addtechnology{
+  background: tomato;
+}
+.listtechnologies{
+  background: lightgreen;
+}
+</style>
+<div class="container">
+  <div class="row">
+    <button class="col-lg-6 adduser" routerLink='/adduser'>
+        <a class="button" style="margin-left:10px">Add User</a>
+    </button>
+    <button class="col-lg-6 listuser" routerLink='/useradmin'>
+        <a class="button" style="margin-left:10px" >List User</a>
+    </button>
+  </div>
+  <div class="row">
+      <button class="col-lg-6 addmentor" routerLink="/addmentor">
+<a class="button" style="margin-left:10px">Add Mentor</a>
+      </button>
+  <button class="col-lg-6 listmentor" routerLink="/mentoradmin">
+<a class="button" style="margin-left:10px">List Mentor</a>
+  </button>
+  </div>
+<div class="row">
+    <button class="col-lg-6 addpayment" routerLink="/addpayment">
+        <a class="button" style="margin-left:10px" >Add Payment</a>
+    </button>
+    <button class="col-lg-6 listpayment" routerLink="/payment">
+      <a class="button" style="margin-left:10px">Payments list</a>
+    </button>
+</div>
+<div class="row">
+    <button class="col-lg-6 addtrainings" routerLink="/addtrainings">
+        <a class="button" style="margin-left:10px">Add Trainings</a>
+    </button>
+    <button class="col-lg-6 listtrainings" routerLink="/trainings">
+        <a class="button" style="margin-left:10px">Trainings List</a>
+    </button>
+  </div>
+<div class="row">
+    <button class="col-lg-6 addtechnology" routerLink="/addtechnologies">
+        <a class="button" style="margin-left:10px">Add Technology</a>
+    </button>
+    <button class="col-lg-6 listtechnologies" routerLink="/technologies">
+        <a class="button" style="margin-left:10px">List Technologies</a>
+    </button>
+  </div>
+</div>

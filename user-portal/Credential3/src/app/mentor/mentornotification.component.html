@@ -1,0 +1,19 @@
+<div *ngIf="studentList">
+    <table class="table table-striped">
+        <th *ngFor="let trainingsTech of trainingsMentor">{{trainingsTech.technologies.technologies}}
+            <tr>
+                <th>UserId</th>
+                <th>First Name</th>
+                <th>Contact Number</th>
+            </tr>
+            <tr *ngFor="let trainings of trainingsTechnology;">
+                <td>{{trainings.id}}</td>
+                <td>{{trainings.firstName}}</td>
+                <td>{{trainings.contactNumber}}</td>
+                <!-- <td><button class="button" style="background-color: lightgreen;" >Accept</button></td> -->
+                <td><button class="button btn-danger" (click)="reject(trainings)" >Reject</button></td>
+            </tr>
+        </th>
+    </table>
+</div>
+<div *ngIf="notstudentList" class="col-lg-12 text-center"> No Data Available </div>

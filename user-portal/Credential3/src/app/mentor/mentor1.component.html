@@ -1,0 +1,54 @@
+<style>
+.col{
+  padding-right: 10px;
+}
+</style>
+
+
+<div class="col-md-6">
+<h2> Mentor Details</h2>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th >MentorId</th>
+    <th>UserName</th>
+    <th>Password</th>
+    <th>FirstName</th>
+    <th>LastName</th>
+    <th>ContactNumber</th>
+    <th>RegistrationCode</th>
+    <th>Role</th>
+    <th>LinkedInUrl</th>
+    <th>Experience</th>
+    <th>Active</th>
+    <th>ConfirmedSignup</th>
+    <th>Reset Password Date</th>
+    <th>TimeZone</th>
+    <th>WorkTime</th>
+  </tr>
+  </thead> 
+  <tr *ngFor="let user of users; let mentorId=index;" >
+    <!-- <div *ngIf = "user.active == true"></div> -->
+    <td>{{user.mentorId}}</td>
+    <td>{{user.userName}}</td>
+    <td>{{user.password}}</td>
+    <td>{{user.firstName}}</td>
+    <td>{{user.lastName}}</td>
+    <td>{{user.contactNumber}}</td>
+    <td>{{user.regCode}}</td>
+    <td>{{user.role}}</td>
+    <td>{{user.linkedinUrl}}</td>
+    <td>{{user.yearsOfExperience}}</td>
+    <!-- <td contenteditable="false"  (input)="act = $event.target.value"><textarea [(ngModel)]="user.active" maxlength="5" style="resize: none;max-lines: 1;">{{user.active}}</textarea></td> -->
+    <td>{{user.active}}</td>
+    <td>{{user.confirmedSignUp}}</td>
+    <td>{{user.resetPasswordDate}}</td>
+    <td>{{user.timeZone}}</td>
+    <td>{{user.workTime}}</td>
+    <!-- <td><button class="btn btn-danger" (click)="deleteUser(user)"> Delete</button></td> -->
+    <!-- </div> -->
+  </tr>
+ 
+</table>
+</div>

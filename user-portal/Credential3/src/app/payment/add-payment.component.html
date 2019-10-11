@@ -1,0 +1,53 @@
+<div class="col-md-6" style="margin-left:25%">
+  <h2 class="text-center">Tution fee</h2>
+<form class="col-mdf-6">
+  <div class="form-group">
+    <label for="tax">Tax Type</label>
+    <input type="text" [(ngModel)]="payment.txnType" placeholder="Enter Tax Type" name="payment.txnType" class="form-control" id="tax">
+  </div>
+
+  <div class="form-group">
+    <label for="amount">Amount:</label>
+    <input [(ngModel)]="payment.amount" placeholder="Amount" name="payment.amount" class="form-control" id="amount">
+  </div>
+
+  <div class="form-group">
+    <label for="remarks">Remarks:</label>
+    <input [(ngModel)]="payment.remarks" placeholder="Remarks" name="payment.remarks" class="form-control" id="remarks">
+  </div>
+
+  <div class="form-group">
+      <label for="mid">Mentor Id</label>
+      <input type="text" [(ngModel)]="payment.mentorId" placeholder="Mentor Id" name="payment.mentorId" class="form-control" id="mid">
+  </div>
+
+  <div class="form-group">
+      <label for="mname">Mentor Name</label>
+      <input type="text" [(ngModel)]="payment.mentorName" placeholder="Mentor Name " name="payment.mentorName" class="form-control" id="mname">
+  </div>
+
+  <div class="form-group">
+      <label for="tid">Trainings Id</label>
+      <input type="text" [(ngModel)]="payment.trainingId" placeholder="Trainings Id" name="payment.trainingId" class="form-control" id="tid">
+  </div>
+
+  <div class="form-group">
+      <label for="sname">Skill Name</label>
+      <input type="text" [(ngModel)]="payment.skillName" placeholder=" Skill Name" name="payment.skillName" class="form-control" id="sname">
+  </div>
+
+  <div class="form-group">
+      <label for="tamntmen">Amount to Mentor</label>
+      <input type="text" [(ngModel)]="payment.totalAmountToMentor" placeholder="Amount to Mentor" name="payment.totalAmountToMentor" class="form-control" id="tamntmen">
+  </div>
+   
+  <button class="btn btn-success" (click)="createPayment()" style="margin-left:50%;"> Pay </button>
+</form>
+</div>
+<style>
+  .btn{
+    background-color: tomato;
+    margin-left:1%;
+    margin-bottom: 1%;
+  }
+</style>

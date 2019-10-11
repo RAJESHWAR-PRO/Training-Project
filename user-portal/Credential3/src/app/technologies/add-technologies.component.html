@@ -1,0 +1,22 @@
+<div class="col-md-6">
+  <h2 class="text-center">Add Technologies Details</h2>
+<form>
+  <div class="form-group">
+    <label for="id">Technology Id</label>
+    <input type="text" [(ngModel)]="technologies.id" placeholder="Technology Id" name="id" class="form-control" id="id">
+  </div>
+
+  <div class="form-group">
+    <label for="technologies">Technology:</label>
+    <input [(ngModel)]="technologies.technologies" placeholder="Technology Name" name="technologies" class="form-control" id="technologies">
+  </div>
+
+  <div class="form-group">
+    <label for="description">Description:</label>
+    <input [(ngModel)]="technologies.description" placeholder="Description" name="description" class="form-control" id="description">
+  </div>
+
+  
+  <button class="btn btn-success" (click)="createTechnologies()">Insert</button>
+</form>
+</div>

@@ -1,0 +1,53 @@
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <div class="heading">
+  <a class="iconbutton" (click)="logout()">
+    <i class="fa fa-user-circle" aria-hidden="true" style="float:right;margin-right:1%;font-size: 30px;margin-top: 5px;"></i>
+  </a>
+  <div class="heading" style="float:left;width: 90%;"><h4 style="margin-left: 1%">Welcome {{username}},</h4>
+  </div>
+  </div>
+  <div class="heading">
+   <div class="container-fluid" style="float: left;width:90%;">
+    <!-- <div class="col-md-offset-1">
+    </div> -->
+    <a style="margin-left:10px" class="button" (click)="showProfile()">User Profile | </a>
+    <a style="margin-left:10px" class=" button"  (click)="showMentor()">List Mentors |  </a>
+    <a style="margin-left:10px" class="button"  (click) ="showPayment()">Payment Gateway | </a>
+    <a style="margin-left:10px" class="button"  (click) ="show()">Payment History | </a>
+    <!-- <a style="margin-left:10px" class="button">Notification</a> -->
+    
+    </div>
+  </div>
+  <app-paymentmentor *ngIf="showPaymentHistory1"></app-paymentmentor>
+  <app-mentorsearch *ngIf="showMentor1"></app-mentorsearch>
+  <app-addpayment *ngIf="showPayment1"></app-addpayment>
+  <app-userprofile *ngIf="showProfile1"></app-userprofile>
+  
+    <style>
+      /* .iconbutton{
+        /* background-color: inherit;
+        background:inherit; */
+      /* }
+      .fa{
+        margin-top: 4px;
+      } */ 
+      .heading{
+        height:40px;
+        background-color: bisque;
+      }
+      a{
+        color: black;
+        margin-top: 10px;
+        margin-left: 10px;
+        text-decoration: none;
+        font-family: monospace;
+        font-size: 25px;
+        cursor: pointer;
+      }
+      a:hover{
+        color:blue;
+        /* border-bottom: 1px solid red; */
+      }
+
+
+    </style>
